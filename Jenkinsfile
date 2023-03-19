@@ -1,14 +1,19 @@
+
 pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
-
-                sh '''#!/bin/bash
+                print "DEBUG: parameter IP_ADDRESS = ${IP_ADDRESS}"
+                sh 
+                sh ''' #!/bin/bash
                  echo "hello world" 
-                 echo '@ssword2020' | ansible-playbook ubuntu_init_with_ansible.yaml -i hosts -u root -k
-         '''
+                 echo '@ssword2020' | ansible-playbook ubuntu_init_with_ansible.yaml -i hosts -u root -k '''
+                sh 'mkdir test'
+                sh 'rm -rf test'
+                echo 'Building..'
+            }
         }
         stage('Test') {
             steps {
@@ -21,5 +26,4 @@ pipeline {
             }
         }
     }
-  }
 }
