@@ -49,6 +49,7 @@
           - nginx 
         state: latest
 
+
     - name: UFW - Allow SSH connections
       community.general.ufw:
         rule: allow
