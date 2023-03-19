@@ -1,7 +1,10 @@
 
 pipeline {
     agent {
-       label "${ubuntu-agent}"
+        node {
+        label 'Ubuntu-agent'
+        customWorkspace '/some/other/path'
+             }
     }
     
     stages {
