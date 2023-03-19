@@ -1,14 +1,14 @@
-- hosts: all
+- hosts: hosts
   become: true
   vars:
-    created_username: sammy
+    ansible_user: master
+    created_username: ansible
 
   tasks:
     - name: Install aptitude
       apt:
         name: aptitude
         state: latest
-        update_cache: true
 
     - name: Setup passwordless sudo
       lineinfile:
@@ -47,7 +47,6 @@
           - git
           - ufw
         state: latest
-        update_cache: true
 
     - name: UFW - Allow SSH connections
       community.general.ufw:
