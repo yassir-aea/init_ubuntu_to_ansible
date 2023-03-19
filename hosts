@@ -1,4 +1,4 @@
-[hosts]
-server1 ansible_host=10.0.0.106
+[web]
+10.0.0.106
 
 
