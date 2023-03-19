@@ -6,7 +6,7 @@ pipeline {
         stage('Build') {
             steps {
                 
-                print "DEBUG: parameter IP_ADDRESS = ${IP_ADDRESS}" >> hosts
+                print "DEBUG: parameter IP_ADDRESS = ${IP_ADDRESS}"
       
                 sh ''' #!/bin/bash
                  echo "hello world" 
