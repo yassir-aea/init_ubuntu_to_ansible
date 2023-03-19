@@ -1,5 +1,4 @@
 [hosts]
 
-{{ IP_ADDRESS }}
-
+${params.IP_ADDRESS}
 
