@@ -1,7 +1,9 @@
 
 pipeline {
-    agent Ubuntu-agent
-
+    agent {
+       label "${Ubuntu-agent}"
+    }
+    
     stages {
         stage('Build') {
             steps {
