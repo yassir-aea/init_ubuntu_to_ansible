@@ -11,9 +11,8 @@ pipeline {
                 sh ' cat hosts'
                 sh 'echo ${IP_ADDRESS} '
                 sh ''' #!/bin/bash
-                 echo "hello world" 
-                 
-                 echo 'P@ssword2020' | ansible-playbook ubuntu_init_with_ansible.yaml -i hosts -u root -e 'IP_ADDRESS = ${IP_ADDRESS}' -k '''
+                 echo "hello world"                  
+                 echo 'P@ssword2020' | ansible-playbook ubuntu_init_with_ansible.yaml -i hosts -u root ' -k '''
 
             }
         }
