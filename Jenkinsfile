@@ -22,7 +22,7 @@ pipeline {
         }
         stage('mise en place website ') {
             steps {
-                ssh 'ansible-playbook install-nginx-andwebsite.yaml -i hosts '
+                sh 'ansible-playbook install-nginx-andwebsite.yaml -i hosts '
             }
         }
         stage('Deploy') {
