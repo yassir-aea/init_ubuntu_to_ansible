@@ -59,3 +59,4 @@
       community.general.ufw:
         state: enabled
         default: deny
+        
