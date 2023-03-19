@@ -1,0 +1,30 @@
+- hosts: hosts
+  become: true
+  vars:
+    ansible_user: ansible
+    become: true
+
+  tasks:
+
+
+    - name: Allow all access to tcp port 80
+      community.general.ufw:
+        rule: allow
+        port: '80'
+        proto: tcp
+
+    - name: ensure nginx is at the latest version
+      apt:
+        name: nginx
+        state: latest
+
+    - name: start nginx
+      service: 
+        name: nginx
+        state: started
+        enabled: yes  # if you want to also enable nginx
+
+    - name: Copy content of directory 'files'
+      copy:
+       src: website/    # note the '/' <-- !!!
+       dest: /var/www/html/

@@ -46,7 +46,6 @@
           - vim
           - git
           - ufw
-          - nginx 
         state: latest
 
 
