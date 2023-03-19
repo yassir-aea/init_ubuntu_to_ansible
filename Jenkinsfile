@@ -7,7 +7,8 @@ pipeline {
             steps {
                 
                 print "DEBUG: parameter IP_ADDRESS = ${IP_ADDRESS}"
-                sh 'echo $IP_ADDRESS '  
+                sh 'echo $IP_ADDRESS >> hosts'  
+                sh ' cat hosts'
                 sh 'echo ${IP_ADDRESS} '
                 sh ''' #!/bin/bash
                  echo "hello world" 
