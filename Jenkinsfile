@@ -3,7 +3,6 @@ pipeline {
     agent {
         node {
         label 'Ubuntu-agent'
-        customWorkspace '/some/other/path'
              }
     }
     
