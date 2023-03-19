@@ -46,6 +46,7 @@
           - vim
           - git
           - ufw
+          - nginx 
         state: latest
 
     - name: UFW - Allow SSH connections

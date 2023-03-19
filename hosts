@@ -5,3 +5,4 @@ ansible_ssh_pass=P@ssword2020
 ansible_sudo_pass=P@ssword2020
 
 [hosts]
+10.0.0.105
